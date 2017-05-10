@@ -1,0 +1,4 @@
+no code,Reagan code, renaime to hostServer.java
+
+send a message from a browser to the hosted agent that is waiting for connections. Then when host server receives a message it knows where to move over the internet.
+So my program can move to a different location and continue to communicate with the web browser. 
