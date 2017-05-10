@@ -1,0 +1,261 @@
+/* Press in the firefox browser http://localhost:2540/ */
+/* We can see details for the directory that we are in and the Get request with the right header*/
+The directory root is: C:\Users\Athina\workspace\WebServer\src
+Athinas MYWebserver, listening at port: 2540 
+
+GET / HTTP/1.1
+a directory is requested
+HTTP/1.1 200 OK
+Content-Length: 4096
+Content-Type: [...]
+
+/* We can see the files that the directory have both in terminal and the browser and we can click on each file*/
+<h1>Index of C:\Users\Athina\workspace\WebServer\src</h1>
+<a href=AddNum.html>AddNum.html</a><br>
+<a href=directory>directory</a><br>
+<a href=dog.txt>dog.txt</a><br>
+<a href=http-streams.txt>http-streams.txt</a><br>
+<a href=lion.html>lion.html</a><br>
+<a href=MyListener.class>MyListener.class</a><br>
+<a href=MyListener.java>MyListener.java</a><br>
+<a href=MyTelnet.class>MyTelnet.class</a><br>
+<a href=MyTelnet.java>MyTelnet.java</a><br>
+<a href=MyWebServer.class>MyWebServer.class</a><br>
+<a href=MyWebServer.java>MyWebServer.java</a><br>
+<a href=serverlog.txt>serverlog.txt</a><br>
+<a href=Worke.class>Worke.class</a><br>
+<a href=Worker.class>Worker.class</a><br>
+
+/* We select the dog.txt and we can see the get request , header and what it has inside*/
+GET /dog.txt HTTP/1.1
+HTTP/1.1 200 OK
+Content-Length: 36
+Content-Type: text/plain
+
+
+This is Athinas dog file on my PC. 
+
+
+/* We select the back button to return to the directory*/
+GET / HTTP/1.1
+a directory is requested
+HTTP/1.1 200 OK
+Content-Length: 4096
+Content-Type: [...]
+
+
+<h1>Index of C:\Users\Athina\workspace\WebServer\src</h1>
+<a href=AddNum.html>AddNum.html</a><br>
+<a href=directory>directory</a><br>
+<a href=dog.txt>dog.txt</a><br>
+<a href=http-streams.txt>http-streams.txt</a><br>
+<a href=lion.html>lion.html</a><br>
+<a href=MyListener.class>MyListener.class</a><br>
+<a href=MyListener.java>MyListener.java</a><br>
+<a href=MyTelnet.class>MyTelnet.class</a><br>
+<a href=MyTelnet.java>MyTelnet.java</a><br>
+<a href=MyWebServer.class>MyWebServer.class</a><br>
+<a href=MyWebServer.java>MyWebServer.java</a><br>
+<a href=serverlog.txt>serverlog.txt</a><br>
+<a href=Worke.class>Worke.class</a><br>
+<a href=Worker.class>Worker.class</a><br>
+
+/* We select the lion.html and see the right header and the content*/
+GET /lion.html HTTP/1.1
+HTTP/1.1 200 OK
+Content-Length: 238
+Content-Type: text/html
+
+
+
+<!-- saved from url=(0042)http://condor.depaul.edu/elliott/lion.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head><body><h1> This is Lion.html saved in Athinas PC. </h1>
+
+</body></html>
+
+
+/* We select the back button to return to the directory*/
+GET / HTTP/1.1
+a directory is requested
+HTTP/1.1 200 OK
+Content-Length: 4096
+Content-Type: [...]
+
+
+<h1>Index of C:\Users\Athina\workspace\WebServer\src</h1>
+<a href=AddNum.html>AddNum.html</a><br>
+<a href=directory>directory</a><br>
+<a href=dog.txt>dog.txt</a><br>
+<a href=http-streams.txt>http-streams.txt</a><br>
+<a href=lion.html>lion.html</a><br>
+<a href=MyListener.class>MyListener.class</a><br>
+<a href=MyListener.java>MyListener.java</a><br>
+<a href=MyTelnet.class>MyTelnet.class</a><br>
+<a href=MyTelnet.java>MyTelnet.java</a><br>
+<a href=MyWebServer.class>MyWebServer.class</a><br>
+<a href=MyWebServer.java>MyWebServer.java</a><br>
+<a href=serverlog.txt>serverlog.txt</a><br>
+<a href=Worke.class>Worke.class</a><br>
+<a href=Worker.class>Worker.class</a><br>
+
+/*...................................... We select http-streams.txt to view the telnet and mylistener output in the browser...................................*/
+GET /http-streams.txt HTTP/1.1
+HTTP/1.1 200 OK
+Content-Length: 1461
+Content-Type: text/plain
+
+
+/* MyListener output */
+
+GET /lion.html HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+
+/* MyTelnet output */
+/* Request for the lion html */
+Athina's MyTelenet Client
+
+Using server: condor.depaul.edu,with  Port: 80
+Ask for a request or enter quit to exit: Host:condor.depaul.edu: 80
+
+HTTP/1.1 200 OK
+Date: Mon, 30 Jan 2017 23:48:13 GMT
+Server: Apache/2.2.3 (Red Hat)
+Last-Modified: Wed, 07 Oct 2015 20:30:38 GMT
+ETag: "630e9-54-521899e8f9780"
+Accept-Ranges: bytes
+Content-Length: 84
+Content-Type: text/html
+Connection: close
+
+<html>
+<h1> This is Lion.html in Elliott's condor account. Good work! </h1>
+</html>
+
+/* Request for the dog.txt */
+Ask for a request or enter quit to exit: Host:condor.depaul.edu: 80
+
+HTTP/1.1 200 OK
+Date: Mon, 30 Jan 2017 23:48:42 GMT
+Server: Apache/2.2.3 (Red Hat)
+Last-Modified: Wed, 07 Oct 2015 20:29:55 GMT
+ETag: "30c78-30-521899bff76c0"
+Accept-Ranges: bytes
+Content-Length: 48
+Content-Type: text/plain
+Connection: close
+
+This is Elliott's dog file on condor. Good job!
+Ask for a request or enter quit to exit: Athina's MyTelenet Client
+
+Using server: condor.depaul.edu,with  Port: 80
+Ask for a request or enter quit to exit: 
+
+/*...................................... end of http-streams.txt go back to the directory and select addnum...................................*/
+GET / HTTP/1.1
+a directory is requested
+HTTP/1.1 200 OK
+Content-Length: 4096
+Content-Type: [...]
+
+
+<h1>Index of C:\Users\Athina\workspace\WebServer\src</h1>
+<a href=AddNum.html>AddNum.html</a><br>
+<a href=directory>directory</a><br>
+<a href=dog.txt>dog.txt</a><br>
+<a href=http-streams.txt>http-streams.txt</a><br>
+<a href=lion.html>lion.html</a><br>
+<a href=MyListener.class>MyListener.class</a><br>
+<a href=MyListener.java>MyListener.java</a><br>
+<a href=MyTelnet.class>MyTelnet.class</a><br>
+<a href=MyTelnet.java>MyTelnet.java</a><br>
+<a href=MyWebServer.class>MyWebServer.class</a><br>
+<a href=MyWebServer.java>MyWebServer.java</a><br>
+<a href=serverlog.txt>serverlog.txt</a><br>
+<a href=Worke.class>Worke.class</a><br>
+<a href=Worker.class>Worker.class</a><br>
+
+/*select addnum */
+GET /AddNum.html HTTP/1.1
+HTTP/1.1 200 OK
+Content-Length: 629
+Content-Type: text/html
+
+
+
+<!-- saved from url=(0073)http://condor.depaul.edu/elliott/435/hw/programs/mywebserver/addnums.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><title> CSC435 Sample Form for AddNum </title></head>
+<body>
+<h1> Addnum </h1>
+
+<form method="GET" action="http://localhost:2540/cgi/addnums.fake-cgi">
+
+Enter your name and two numbers:
+
+<input type="text" name="person" size="20" value="YourName"><p>
+
+<input type="text" name="num1" size="5" value="4"> <br>
+<input type="text" name="num2" size="5" value="5"> <br>
+
+<input type="submit" value="Submit Numbers">
+
+</p></form> 
+</body></html>
+
+/*Press the submit button after put the name and numbers and view the results in the browser */
+GET /cgi/addnums.fake-cgi?person=Athina&num1=3&num2=2 HTTP/1.1
+Dear Athina, the sum of 3 and 2 is 5.
+
+/*go back to the directory*/
+GET / HTTP/1.1
+a directory is requested
+HTTP/1.1 200 OK
+Content-Length: 4096
+Content-Type: [...]
+
+
+<h1>Index of C:\Users\Athina\workspace\WebServer\src</h1>
+<a href=AddNum.html>AddNum.html</a><br>
+<a href=directory>directory</a><br>
+<a href=dog.txt>dog.txt</a><br>
+<a href=http-streams.txt>http-streams.txt</a><br>
+<a href=lion.html>lion.html</a><br>
+<a href=MyListener.class>MyListener.class</a><br>
+<a href=MyListener.java>MyListener.java</a><br>
+<a href=MyTelnet.class>MyTelnet.class</a><br>
+<a href=MyTelnet.java>MyTelnet.java</a><br>
+<a href=MyWebServer.class>MyWebServer.class</a><br>
+<a href=MyWebServer.java>MyWebServer.java</a><br>
+<a href=serverlog.txt>serverlog.txt</a><br>
+<a href=Worke.class>Worke.class</a><br>
+<a href=Worker.class>Worker.class</a><br>
+
+/*select the directory inside the directory but we can not see the right files exception is occured*/
+GET /directory HTTP/1.1
+a directory is requested
+HTTP/1.1 200 OK
+Content-Length: 4096
+Content-Type: [...]
+
+
+<h1>Index of C:\Users\Athina\workspace\WebServer\src</h1>
+<a href=AddNum.html>AddNum.html</a><br>
+<a href=directory>directory</a><br>
+<a href=dog.txt>dog.txt</a><br>
+<a href=http-streams.txt>http-streams.txt</a><br>
+<a href=lion.html>lion.html</a><br>
+<a href=MyListener.class>MyListener.class</a><br>
+<a href=MyListener.java>MyListener.java</a><br>
+<a href=MyTelnet.class>MyTelnet.class</a><br>
+<a href=MyTelnet.java>MyTelnet.java</a><br>
+<a href=MyWebServer.class>MyWebServer.class</a><br>
+<a href=MyWebServer.java>MyWebServer.java</a><br>
+<a href=serverlog.txt>serverlog.txt</a><br>
+<a href=Worke.class>Worke.class</a><br>
+<a href=Worker.class>Worker.class</a><br>
+null
