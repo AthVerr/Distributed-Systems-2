@@ -1,0 +1,300 @@
+/* Joke JokeClient Admin output */
+/* Check the default mode with one one client, then add 2 more clients, we can observe that the mode changed successfully and in case of wrong input we are notified  */
+
+!!! Athina's JokeClientAdmin !!!
+
+Server that we try to connect is :  192.168.0.34, listening to Port: 5050 
+
+Please enter the mode u want: Select pro: for proverb mode or j: for joke mode or quit to exit the adminClient 
+
+The selected mode is : proverb
+Please enter the mode u want: Select pro: for proverb mode or j: for joke mode or quit to exit the adminClient 
+
+The selected mode is : joke
+Please enter the mode u want: Select pro: for proverb mode or j: for joke mode or quit to exit the adminClient 
+
+Wrong input,Press enter or w
+Please enter the mode u want: Select pro: for proverb mode or j: for joke mode or quit to exit the adminClient 
+
+admin wants to exit 
+
+Exit From JokeClientAdmin 
+
+
+/* First JokeClient output */
+/* Test with my IP and we can observe that the jokes are random but not repeated, the user name is passed one time and then we can see it in the jokes/proverb*/
+/* notify for wrong input (not enter or quit)*/
+
+!!! Athina's JokeClient !!!
+
+Server that we try to connect is :  192.168.0.34, listening to Port: 4545
+
+Please enter your username for identification
+The user :  Athina asks for a joke or proverb ,Please press enter to confirm or quit to exit: JD Athina :  How does NASA organize their company parties??? They planet!!
+The user :  Athina asks for a joke or proverb ,Please press enter to confirm or quit to exit: JC Athina :  What kind of shoes do ninjas wear??? Sneakers!!!
+The user :  Athina asks for a joke or proverb ,Please press enter to confirm or quit to exit: JA Athina :  Can a kangaroo jump higher than a house???? Of course, a house does not jump at all.
+The user :  Athina asks for a joke or proverb ,Please press enter to confirm or quit to exit: JB Athina :  Why does Snoop Dogg carry an umbrella??? Fo’ drizzle!! ;) 
+The user :  Athina asks for a joke or proverb ,Please press enter to confirm or quit to exit: JA Athina :  Can a kangaroo jump higher than a house???? Of course, a house does not jump at all.
+The user :  Athina asks for a joke or proverb ,Please press enter to confirm or quit to exit: PD Athina :  Whatever is good to know is difficult to learn
+The user :  Athina asks for a joke or proverb ,Please press enter to confirm or quit to exit: PC Athina :  Act quickly , think slowly 
+The user :  Athina asks for a joke or proverb ,Please press enter to confirm or quit to exit: PA Athina :  The beginning is the half of every action
+The user :  Athina asks for a joke or proverb ,Please press enter to confirm or quit to exit: PB Athina :   Before you can score, u must have a goal
+The user :  Athina asks for a joke or proverb ,Please press enter to confirm or quit to exit: PC Athina :  Act quickly , think slowly 
+The user :  Athina asks for a joke or proverb ,Please press enter to confirm or quit to exit: JB Athina :  Why does Snoop Dogg carry an umbrella??? Fo’ drizzle!! ;) 
+The user :  Athina asks for a joke or proverb ,Please press enter to confirm or quit to exit: JD Athina :  How does NASA organize their company parties??? They planet!!
+The user :  Athina asks for a joke or proverb ,Please press enter to confirm or quit to exit: Wrong input,Press enter or w
+The user :  Athina asks for a joke or proverb ,Please press enter to confirm or quit to exit: Wrong input,Press enter or w
+Exit from JokeClient 
+
+
+/* Second JokeClient output */
+/* Try for default connection, observe that it doent interfere with other client communication (can see more on server side)*/
+
+!!! Athina's JokeClient !!!
+
+Server that we try to connect is :  localhost, listening to Port: 4545
+
+Please enter your username for identification
+The user :  Maria asks for a joke or proverb ,Please press enter to confirm or quit to exit: PA Maria :  The beginning is the half of every action
+The user :  Maria asks for a joke or proverb ,Please press enter to confirm or quit to exit: PB Maria :   Before you can score, u must have a goal
+The user :  Maria asks for a joke or proverb ,Please press enter to confirm or quit to exit: PD Maria :  Whatever is good to know is difficult to learn
+The user :  Maria asks for a joke or proverb ,Please press enter to confirm or quit to exit: JC Maria :  What kind of shoes do ninjas wear??? Sneakers!!!
+The user :  Maria asks for a joke or proverb ,Please press enter to confirm or quit to exit: user wants to exit 
+
+Exit from JokeClient 
+
+/* Third JokeClient output */
+/* Try for default connection, observe that it doent interfere with other client communication (can see more on server side)*/
+
+!!! Athina's JokeClient !!!
+
+Server that we try to connect is :  localhost, listening to Port: 4545
+
+Please enter your username for identification
+The user :  Liza asks for a joke or proverb ,Please press enter to confirm or quit to exit: PD Liza :  Whatever is good to know is difficult to learn
+The user :  Liza asks for a joke or proverb ,Please press enter to confirm or quit to exit: PB Liza :   Before you can score, u must have a goal
+The user :  Liza asks for a joke or proverb ,Please press enter to confirm or quit to exit: PA Liza :  The beginning is the half of every action
+The user :  Liza asks for a joke or proverb ,Please press enter to confirm or quit to exit: JC Liza :  What kind of shoes do ninjas wear??? Sneakers!!!
+The user :  Liza asks for a joke or proverb ,Please press enter to confirm or quit to exit: JB Liza :  Why does Snoop Dogg carry an umbrella??? Fo’ drizzle!! ;) 
+The user :  Liza asks for a joke or proverb ,Please press enter to confirm or quit to exit: JA Liza :  Can a kangaroo jump higher than a house???? Of course, a house does not jump at all.
+The user :  Liza asks for a joke or proverb ,Please press enter to confirm or quit to exit: user wants to exit 
+
+Exit from JokeClient 
+
+
+/* JokeServer output */
+/* Try for connection to the first client and connect with admin, observe that it reads the username and save a cookie for the first client*/
+/* Can observer the list changes and what is removed every time (it means this goes to client), see the change to proverb, run as it should*/
+
+Admin thread
+JokeServer connection to adminClient, listening at port 5050.
+
+JokeServer connection to Jokeclient, listening at port 4545.
+
+connection to the client with Username Athina
+My cookie is bfad6afe-dbb8-4949-bde6-44c51953d895
+..........
+[JB Athina :  Why does Snoop Dogg carry an umbrella??? Fo’ drizzle!! ;) , JC Athina :  What kind of shoes do ninjas wear??? Sneakers!!!, JA Athina :  Can a kangaroo jump higher than a house???? Of course, a house does not jump at all.]..........
+
+Already Send to Client the joke: 
+JD Athina :  How does NASA organize their company parties??? They planet!!
+Worker thread closed
+connection to the client with Username Athina
+My cookie is bfad6afe-dbb8-4949-bde6-44c51953d895
+..........
+[JB Athina :  Why does Snoop Dogg carry an umbrella??? Fo’ drizzle!! ;) , JA Athina :  Can a kangaroo jump higher than a house???? Of course, a house does not jump at all.]..........
+
+Already Send to Client the joke: 
+JC Athina :  What kind of shoes do ninjas wear??? Sneakers!!!
+Worker thread closed
+connection to the client with Username Athina
+My cookie is bfad6afe-dbb8-4949-bde6-44c51953d895
+..........
+[JB Athina :  Why does Snoop Dogg carry an umbrella??? Fo’ drizzle!! ;) ]..........
+
+Already Send to Client the joke: 
+JA Athina :  Can a kangaroo jump higher than a house???? Of course, a house does not jump at all.
+Worker thread closed
+connection to the client with Username Athina
+My cookie is bfad6afe-dbb8-4949-bde6-44c51953d895
+..........
+[]..........
+
+Already Send to Client the joke: 
+JB Athina :  Why does Snoop Dogg carry an umbrella??? Fo’ drizzle!! ;) 
+Worker thread closed
+connection to the client with Username Athina
+My cookie is bfad6afe-dbb8-4949-bde6-44c51953d895
+..........
+[JC Athina :  What kind of shoes do ninjas wear??? Sneakers!!!, JD Athina :  How does NASA organize their company parties??? They planet!!, JB Athina :  Why does Snoop Dogg carry an umbrella??? Fo’ drizzle!! ;) ]..........
+
+Already Send to Client the joke: 
+JA Athina :  Can a kangaroo jump higher than a house???? Of course, a house does not jump at all.
+Worker thread closed
+thread admin is closed
+connection to the client with Username Athina
+My cookie is bfad6afe-dbb8-4949-bde6-44c51953d895
+..........
+[PB Athina :   Before you can score, u must have a goal, PA Athina :  The beginning is the half of every action, PC Athina :  Act quickly , think slowly ]..........
+
+Already Send to Client the proverb: 
+PD Athina :  Whatever is good to know is difficult to learn
+Worker thread closed
+
+/* Try for connection to the secont client and observe that it reads the different username and save a different  cookie for the second client*/
+/* Can observer no interference, run as it should*/
+
+connection to the client with Username Athina
+My cookie is bfad6afe-dbb8-4949-bde6-44c51953d895
+..........
+[PA Athina :  The beginning is the half of every action, PB Athina :   Before you can score, u must have a goal]..........
+
+Already Send to Client the proverb: 
+PC Athina :  Act quickly , think slowly 
+Worker thread closed
+connection to the client with Username Athina
+My cookie is bfad6afe-dbb8-4949-bde6-44c51953d895
+..........
+[PB Athina :   Before you can score, u must have a goal]..........
+
+Already Send to Client the proverb: 
+PA Athina :  The beginning is the half of every action
+Worker thread closed
+connection to the client with Username Athina
+My cookie is bfad6afe-dbb8-4949-bde6-44c51953d895
+..........
+[]..........
+
+Already Send to Client the proverb: 
+PB Athina :   Before you can score, u must have a goal
+Worker thread closed
+connection to the client with Username Athina
+My cookie is bfad6afe-dbb8-4949-bde6-44c51953d895
+..........
+[PD Athina :  Whatever is good to know is difficult to learn, PB Athina :   Before you can score, u must have a goal, PA Athina :  The beginning is the half of every action]..........
+
+Already Send to Client the proverb: 
+PC Athina :  Act quickly , think slowly 
+Worker thread closed
+connection to the client with Username Maria
+My cookie is 8773593c-b53c-41f9-ae5a-13650dac8c0a
+..........
+[PC Maria :  Act quickly , think slowly , PD Maria :  Whatever is good to know is difficult to learn, PB Maria :   Before you can score, u must have a goal]..........
+
+Already Send to Client the proverb: 
+PA Maria :  The beginning is the half of every action
+Worker thread closed
+connection to the client with Username Maria
+My cookie is 8773593c-b53c-41f9-ae5a-13650dac8c0a
+..........
+[PD Maria :  Whatever is good to know is difficult to learn, PC Maria :  Act quickly , think slowly ]..........
+
+Already Send to Client the proverb: 
+PB Maria :   Before you can score, u must have a goal
+Worker thread closed
+
+
+/* Try for connection to the third client and observe no interference, run as it should*/
+
+connection to the client with Username Maria
+My cookie is 8773593c-b53c-41f9-ae5a-13650dac8c0a
+..........
+[PC Maria :  Act quickly , think slowly , PD Maria :  Whatever is good to know is difficult to learn, PB Maria :   Before you can score, u must have a goal]..........
+
+Already Send to Client the proverb: 
+PA Maria :  The beginning is the half of every action
+Worker thread closed
+connection to the client with Username Maria
+My cookie is 8773593c-b53c-41f9-ae5a-13650dac8c0a
+..........
+[PD Maria :  Whatever is good to know is difficult to learn, PC Maria :  Act quickly , think slowly ]..........
+
+Already Send to Client the proverb: 
+PB Maria :   Before you can score, u must have a goal
+Worker thread closed
+connection to the client with Username Liza
+My cookie is 6570931f-ffa6-4146-936f-3353a27ba5fb
+..........
+[PA Liza :  The beginning is the half of every action, PC Liza :  Act quickly , think slowly , PB Liza :   Before you can score, u must have a goal]..........
+
+Already Send to Client the proverb: 
+PD Liza :  Whatever is good to know is difficult to learn
+Worker thread closed
+connection to the client with Username Liza
+My cookie is 6570931f-ffa6-4146-936f-3353a27ba5fb
+..........
+[PC Liza :  Act quickly , think slowly , PA Liza :  The beginning is the half of every action]..........
+
+Already Send to Client the proverb: 
+PB Liza :   Before you can score, u must have a goal
+Worker thread closed
+connection to the client with Username Liza
+My cookie is 6570931f-ffa6-4146-936f-3353a27ba5fb
+..........
+[PC Liza :  Act quickly , think slowly ]..........
+
+Already Send to Client the proverb: 
+PA Liza :  The beginning is the half of every action
+Worker thread closed
+connection to the client with Username Maria
+My cookie is 8773593c-b53c-41f9-ae5a-13650dac8c0a
+..........
+[PC Maria :  Act quickly , think slowly ]..........
+
+Already Send to Client the proverb: 
+PD Maria :  Whatever is good to know is difficult to learn
+Worker thread closed
+thread admin is closed
+connection to the client with Username Liza
+My cookie is 6570931f-ffa6-4146-936f-3353a27ba5fb
+..........
+[JA Liza :  Can a kangaroo jump higher than a house???? Of course, a house does not jump at all., JD Liza :  How does NASA organize their company parties??? They planet!!, JB Liza :  Why does Snoop Dogg carry an umbrella??? Fo’ drizzle!! ;) ]..........
+
+Already Send to Client the joke: 
+JC Liza :  What kind of shoes do ninjas wear??? Sneakers!!!
+Worker thread closed
+connection to the client with Username Liza
+My cookie is 6570931f-ffa6-4146-936f-3353a27ba5fb
+..........
+[JA Liza :  Can a kangaroo jump higher than a house???? Of course, a house does not jump at all., JD Liza :  How does NASA organize their company parties??? They planet!!]..........
+
+Already Send to Client the joke: 
+JB Liza :  Why does Snoop Dogg carry an umbrella??? Fo’ drizzle!! ;) 
+Worker thread closed
+connection to the client with Username Liza
+My cookie is 6570931f-ffa6-4146-936f-3353a27ba5fb
+..........
+[JD Liza :  How does NASA organize their company parties??? They planet!!]..........
+
+Already Send to Client the joke: 
+JA Liza :  Can a kangaroo jump higher than a house???? Of course, a house does not jump at all.
+Worker thread closed
+connection to the client with Username Athina
+My cookie is bfad6afe-dbb8-4949-bde6-44c51953d895
+..........
+[JC Athina :  What kind of shoes do ninjas wear??? Sneakers!!!, JD Athina :  How does NASA organize their company parties??? They planet!!]..........
+
+Already Send to Client the joke: 
+JB Athina :  Why does Snoop Dogg carry an umbrella??? Fo’ drizzle!! ;) 
+Worker thread closed
+connection to the client with Username Athina
+My cookie is bfad6afe-dbb8-4949-bde6-44c51953d895
+..........
+[JC Athina :  What kind of shoes do ninjas wear??? Sneakers!!!]..........
+
+Already Send to Client the joke: 
+JD Athina :  How does NASA organize their company parties??? They planet!!
+Worker thread closed
+connection to the client with Username Maria
+My cookie is 8773593c-b53c-41f9-ae5a-13650dac8c0a
+..........
+[JD Maria :  How does NASA organize their company parties??? They planet!!, JB Maria :  Why does Snoop Dogg carry an umbrella??? Fo’ drizzle!! ;) , JA Maria :  Can a kangaroo jump higher than a house???? Of course, a house does not jump at all.]..........
+
+Already Send to Client the joke: 
+JC Maria :  What kind of shoes do ninjas wear??? Sneakers!!!
+Worker thread closed
+
+
+
+
+
